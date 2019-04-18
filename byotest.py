@@ -17,3 +17,13 @@ def test_not_in(collection, item):
 
 def test_between(a, b, c):
     assert c >= a and c <= b, "{2} is not between {0} and {1}".format(a, b, c)
+
+
+def test_exception_was_raised(func, args, message):
+    try:
+        func(*args)
+
+        assert False, "Exception was not raised"
+    except Exception as e:
+
+        assert e.args[0] == message, "The message that was provided did not match the message thrown"
