@@ -17,14 +17,3 @@ def test_not_in(collection, item):
 
 def test_between(a, b, c):
     assert c >= a and c <= b, "{2} is not between {0} and {1}".format(a, b, c)
-
-
-test_not_equal(0, 0)
-
-test_is_in([1, 2], 3)
-
-test_not_in([1, 2], 2)
-
-test_between(1, 3, 4)
-
-test_are_equal(([1, 2, 3, 4, 5]), 2)
